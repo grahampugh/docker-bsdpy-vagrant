@@ -66,9 +66,13 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
     
-  config.vm.provision "shell", path: "startup.sh"
-  
-  # Startup takes a long time - you may need to increase the timeout limit
-  config.vm.boot_timeout = 500
+  # Uncomment this out if you want to run the startup script automatically.
+  # But note that this initialises a lengthy yum update & docker pull workflow
+  # which could take a long time, so you'll need to set a long timeout below. 
+  # It also won't work properly due to a 
+  # VirtualBox Guest Additions issue which requires manual attention. See:
+  # https://grpugh.wordpress.com/2015/04/28/a-test-docker-bsdpy-environment/
+  # config.vm.provision "shell", path: "startup.sh"
+  # config.vm.boot_timeout = 600
 
 end
