@@ -1,0 +1,1 @@
+{"virtualbox":{"/usr/local/docker":{"mount_options":["dmode=777","fmode=777"],"guestpath":"/usr/local/docker","hostpath":"/Users/grazza/vagrant/docker-bsdpy","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/grazza/vagrant/bsdpy","disabled":false}}}
